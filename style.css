@@ -1,0 +1,114 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   box-sizing: border-box; 
+}
+body {
+   background-color: #262a2f;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   padding: 10px; /* Added padding for small screens */
+}
+.text {
+   color: white;
+   font-size: 25px;
+   margin-bottom: 30px;
+   text-align: center;
+}
+.container {
+   width: 100%; /* Full width for small screens */
+   max-width: 400px; /* Maintain max width for larger screens */
+   padding: 25px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.container p {
+   font-weight: 600;
+   font-size: 15px;
+   margin-bottom: 8px;
+   text-align: center; /* Center align text */
+}
+.container input {
+   width: 100%;
+   height: 50px;
+   border: 1px solid #494eea;
+   outline: none;
+   padding: 10px;
+   margin: 10px 0 20px;
+   border-radius: 5px;
+   font-size: 14px; /* Slightly smaller font for better fit */
+}
+.container button {
+   width: 100%;
+   height: 50px;
+   border-radius: 5px;
+   background: #494eea;
+   color: white;
+   border: none;
+   outline: none;
+   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   margin: 20px 0;
+   font-weight: 500;
+   font-size: 16px;
+   transition: background 0.3s ease;
+}
+.container button:hover {
+   background: #3a3ed8;
+}
+.qr {
+   width: 200px;
+   border-radius: 5px;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 1s ease;
+   margin: 0 auto;
+}
+.im {
+   width: 100%;
+   padding: 10px;
+}
+.qr.show-im {
+   max-height: 300px;
+   margin: 10px auto;
+   border: 1px solid #d1d1d1;
+}
+.error {
+   animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+   0% { transform: translate(0); }
+   25% { transform: translate(-2px); }
+   50% { transform: translate(0); }
+   75% { transform: translate(2px); }
+   100% { transform: translate(0); }
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 600px) {
+   .text {
+       font-size: 20px; /* Reduce font size for smaller screens */
+   }
+   .container {
+       padding: 20px; /* Reduce padding for smaller screens */
+   }
+   .container input {
+       height: 40px; /* Reduce input height */
+       font-size: 12px; /* Smaller font size for input */
+   }
+   .container button {
+       height: 45px; /* Reduce button height */
+       font-size: 14px; /* Smaller font size for button text */
+   }
+   .qr {
+       width: 150px; /* Smaller QR code width for smaller screens */
+   }
+   .qr.show-im {
+       max-height: 250px; /* Adjust max height */
+   }
+}
